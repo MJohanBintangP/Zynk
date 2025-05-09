@@ -27,8 +27,9 @@ di web ini saya membuat portal berita yang API nya saya ambil dari CNN
 
 ```bash
 cd frontend
-npm install
-npm run dev
+npm install -g pnpm (if you use pnpm)
+npm/pnpm install
+npm/pnpm run dev
 ```
 
 ### 🔧 Jalankan Backend
