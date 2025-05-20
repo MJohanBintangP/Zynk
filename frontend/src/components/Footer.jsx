@@ -9,25 +9,26 @@ const Footer = () => {
         <div className="flex flex-col gap-5 max-w-lg">
           <img className="w-20" src={logo} alt="logoZynk" />
           <p className="text-[12px] text-justify lg:text-left">
-            Zynk is a modern news portal dedicated to delivering accurate, fast, and relevant information across a wide range of topics—from global headlines and technology to lifestyle and entertainment. We believe in the power of truth
-            and clarity, aiming to keep our readers informed, inspired, and always one step ahead. Stay connected with Zynk—your trusted source in the ever-evolving world of news.
+            Zynk adalah portal berita modern yang didedikasikan untuk menyampaikan informasi yang akurat, cepat, dan relevan dalam berbagai topik—mulai dari berita utama global dan teknologi hingga gaya hidup dan hiburan. Kami percaya pada
+            kekuatan kebenaran dan kejelasan, yang bertujuan untuk membuat pembaca kami tetap terinformasi, terinspirasi, dan selalu selangkah lebih maju. Tetap terhubung dengan Zynk—sumber tepercaya Anda di dunia berita yang terus
+            berkembang.
           </p>
           <p className="text-[12px] mt-5 font-medium">© 2025 mjohanbintangp</p>
         </div>
 
         {/* Kontak */}
         <div className="flex flex-col max-w-sm">
-          <h1 className="font-semibold text-[15px] mb-5">Our Contact</h1>
+          <h1 className="font-semibold text-[15px] mb-5">Kontak kami</h1>
           <a className="hover:underline flex items-center gap-3 text-[12px]" href="mailto:m.johanbintang.pratama@gmail.com">
             <EnvelopeSimple size={18} weight="bold" />
             m.johanbintang.pratama@gmail.com
           </a>
-          <p className="text-[12px] font-semibold mt-2">or you can contact in my social media</p>
+          <p className="text-[12px] font-semibold mt-2">atau kamu bisa hubungi di sosial media saya</p>
         </div>
 
         {/* Profile */}
         <div className="flex flex-col max-w-sm">
-          <h1 className="font-semibold text-[15px] mb-5">Author Profile</h1>
+          <h1 className="font-semibold text-[15px] mb-5">Profil pembuat</h1>
           <div className="flex flex-col gap-4">
             <a className="hover:underline flex items-center gap-3 text-[12px]" target="_blank" rel="noopener noreferrer" href="https://mjohanbintangp.vercel.app/">
               <GlobeSimple size={18} weight="bold" />

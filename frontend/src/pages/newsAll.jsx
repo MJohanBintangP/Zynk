@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import { CaretRight } from '@phosphor-icons/react';
 import Footer from '../components/Footer.jsx';
 
 const NewsAll = () => {
@@ -10,9 +9,7 @@ const NewsAll = () => {
   useEffect(() => {
     let API_URL;
 
-    if (import.meta.env.DEV && import.meta.env.VITE_ENV === 'localnet') {
-      API_URL = 'http://192.168.1.10:3000/api/news';
-    } else if (import.meta.env.DEV) {
+    if (import.meta.env.DEV) {
       API_URL = 'http://localhost:3000/api/news';
     } else {
       API_URL = `${import.meta.env.VITE_API_URL}/api/news`;

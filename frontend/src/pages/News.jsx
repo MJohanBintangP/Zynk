@@ -30,9 +30,7 @@ const News = () => {
   useEffect(() => {
     let API_URL;
 
-    if (import.meta.env.DEV && import.meta.env.VITE_ENV === 'localnet') {
-      API_URL = 'http://192.168.1.10:3000/api/news';
-    } else if (import.meta.env.DEV) {
+    if (import.meta.env.DEV) {
       API_URL = 'http://localhost:3000/api/news';
     } else {
       API_URL = `${import.meta.env.VITE_API_URL}/api/news`;
@@ -172,7 +170,7 @@ const News = () => {
 
         <div id="hotNews" className="mb-32 px-6 sm:px-0">
           <div className="flex justify-between mb-5">
-            <h2 className="text-xl font-semibold mb-4">Hot News</h2>
+            <h2 className="text-xl font-semibold mb-4">Berita hangat</h2>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-18 lg:gap-18 mb-8">
@@ -192,9 +190,9 @@ const News = () => {
 
         <div className="px-6 sm:px-0">
           <div className="flex justify-between items-center mb-8">
-            <h2 className="text-xl font-semibold">Latest News</h2>
+            <h2 className="text-xl font-semibold">Berita terbaru</h2>
             <Link className="flex items-center gap-2" to="/NewsAll">
-              See all <CaretRight size={20} weight="bold" />
+              Lihat semua <CaretRight size={20} weight="bold" />
             </Link>
           </div>
 
