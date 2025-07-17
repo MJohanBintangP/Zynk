@@ -12,7 +12,17 @@ const NewsAll = () => {
     API_URL = '/api-news';
 
     fetch(API_URL)
-      .then((response) => response.json())
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const contentType = response.headers.get('content-type');
+        if (!contentType || !contentType.includes('application/json')) {
+          throw new Error('Response is not JSON. Received HTML instead of JSON data.');
+        }
+
+        return response.json();
+      })
       .then((data) => {
         if (data && data.data) {
           setArticles(data.data);
@@ -22,8 +32,8 @@ const NewsAll = () => {
         setLoading(false);
       })
       .catch((err) => {
-        console.error(err);
-        setError('Failed to load news.');
+        console.error('Failed to fetch articles:', err);
+        setError(`Failed to load news: ${err.message}`);
         setLoading(false);
       });
   }, []);
